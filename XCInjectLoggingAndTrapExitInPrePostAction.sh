@@ -6,16 +6,16 @@
 #  Created by Grigory Entin on 02.03.2018.
 #  Copyright © 2018 Grigory Entin. All rights reserved.
 
-#  This script is a workaround for two problems with pre- and post- Xcode actions:
-#  1. Exit status of the action is not respected, build proceeds even if action fails
-#  2. Action log is lost
+#  This script is a workaround for two problems with Xcode pre- and post-actions (everything below is applicable to post-actions as well, but post-actions are not mentioned for brevity):
+#  1. Exit status of the pre-action is not respected, Xcode proceeds with the action even if pre-action fails.
+#  2. Pre-action log is lost when running from Xcode.
 #
-#  When pre-post-action fails for Xcode build, the build will be stopped, and have a chance to take a look at the action log.
+#  After this script is sourced (see below), if pre-action fails from within Xcode, the build will be stopped, and alert with diagnostics is presented with an option to open the pre-action log.
+#  If pre-action fails from xcodebuild, xcodebuild will be interrupted as well.
 #
 #  Usage: source this script at the beginning of pre- or post-action, passing it a user-friendly *unique* pre- or post-action name, like below:
 #
 #      . "${SRCROOT:?}"/XCInjectLoggingAndTrapExitInPrePostAction.sh "preTest"
-
 
 phaseName="${1:?}"; shift
 
