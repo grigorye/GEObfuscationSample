@@ -8,12 +8,12 @@
 
 import XCTest
 
-// The tests rely on the external tool that scans the memory for a given string. See `matches` in MemoryScanning.swift.
-// It's *assumed* that the tool indeed gives the correct answer/is "the source of truth".
-// The tests prove the correctness of obfuscation by first proving (via tool) that
-// 1) the secret (and obfuscated version) is indeed in memory when expected (while the secret is manipulated in UI)
-// 2) the secret (and obfuscated version) is not in memory when expected (when the secret is not manipulated in UI/obfuscated version is purged)
-//
+/// The tests rely on the external tool that scans the memory for a given string. See `matches` in MemoryScanning.swift.
+/// It's *assumed* that the tool indeed gives the correct answer/is "the source of truth".
+/// The tests confirm the correctness of obfuscation by verifying that
+/// 1) The secret (and obfuscated version) is indeed in memory when expected (while the secret is manipulated in UI).
+/// 2) The secret (and obfuscated version) is not in memory when expected (when the secret is not manipulated in UI/obfuscated version is purged).
+/// - Tag: Obfuscated-Value-Wrapper
 class GEObfuscationSampleUITests: XCTestCase {
 	
 	override func setUp() {
