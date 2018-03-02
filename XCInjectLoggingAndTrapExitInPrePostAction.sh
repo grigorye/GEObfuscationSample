@@ -21,10 +21,20 @@ phaseName="${1:?}"; shift
 
 log="${PROJECT_TEMP_DIR:?}"/"${phaseName:?}".log
 
-exec > "${log:?}" 2>&1
+if ps -p ${PPID:?} -o comm | tail -1 | grep -e '/Xcode$'
+then
+	runningInXcode=true
+else
+	runningInXcode=false
+fi
+
+if $runningInXcode
+then
+	exec > "${log:?}" 2>&1
+fi
 
 trap '
-if ps -p ${PPID:?} -o comm | tail -1 | grep -e '/Xcode$'
+if $runningInXcode
 then
 	osascript <<-END
 		tell application "Xcode"
