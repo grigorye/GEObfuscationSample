@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C401224420481ACB007F7D0D /* GEObfuscationSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C401224320481ACB007F7D0D /* GEObfuscationSampleUITests.swift */; };
 		C401224C20484CE6007F7D0D /* MemoryScanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C401224B20484CE6007F7D0D /* MemoryScanning.swift */; };
+		C415A2D82049FA0C0060FB5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C415A2D72049FA0C0060FB5A /* README.md */; };
 		C4BAE13A204705A600FA6D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAE139204705A600FA6D7C /* AppDelegate.swift */; };
 		C4BAE13C204705A600FA6D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAE13B204705A600FA6D7C /* ViewController.swift */; };
 		C4BAE13F204705A600FA6D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BAE13D204705A600FA6D7C /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		C401224320481ACB007F7D0D /* GEObfuscationSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEObfuscationSampleUITests.swift; sourceTree = "<group>"; };
 		C401224520481ACB007F7D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C401224B20484CE6007F7D0D /* MemoryScanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryScanning.swift; sourceTree = "<group>"; };
+		C415A2D72049FA0C0060FB5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C42C606720494A9400EA9824 /* preTest */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = preTest; sourceTree = "<group>"; usesTabs = 1; };
 		C42C6068204952EF00EA9824 /* postTest */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = postTest; sourceTree = "<group>"; usesTabs = 1; };
 		C458E66A204970C800E4643D /* XCInjectLoggingAndTrapExitInPrePostAction.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCInjectLoggingAndTrapExitInPrePostAction.sh; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		C4BAE12D204705A600FA6D7C = {
 			isa = PBXGroup;
 			children = (
+				C415A2D72049FA0C0060FB5A /* README.md */,
 				C4BAE138204705A600FA6D7C /* GEObfuscationSample */,
 				C4BAE14D204705A600FA6D7C /* GEObfuscationSampleTests */,
 				C401224220481ACB007F7D0D /* GEObfuscationSampleUITests */,
@@ -264,6 +267,7 @@
 			files = (
 				C4BAE144204705A600FA6D7C /* LaunchScreen.storyboard in Resources */,
 				C4BAE141204705A600FA6D7C /* Assets.xcassets in Resources */,
+				C415A2D82049FA0C0060FB5A /* README.md in Resources */,
 				C4BAE13F204705A600FA6D7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
