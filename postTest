@@ -1,0 +1,11 @@
+#!/bin/sh -ex
+
+#  postTest
+#  GEObfuscationSample
+#
+#  Created by Grigory Entin on 02.03.2018.
+#  Copyright © 2018 Grigory Entin. All rights reserved.
+
+pushd "${TARGET_TEMP_DIR:?}"
+
+. preTest-unwind.sh

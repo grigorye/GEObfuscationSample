@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C401224420481ACB007F7D0D /* GEObfuscationSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C401224320481ACB007F7D0D /* GEObfuscationSampleUITests.swift */; };
+		C401224C20484CE6007F7D0D /* MemoryScanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C401224B20484CE6007F7D0D /* MemoryScanning.swift */; };
+		C4BAE13A204705A600FA6D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAE139204705A600FA6D7C /* AppDelegate.swift */; };
+		C4BAE13C204705A600FA6D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAE13B204705A600FA6D7C /* ViewController.swift */; };
+		C4BAE13F204705A600FA6D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BAE13D204705A600FA6D7C /* Main.storyboard */; };
+		C4BAE141204705A600FA6D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BAE140204705A600FA6D7C /* Assets.xcassets */; };
+		C4BAE144204705A600FA6D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BAE142204705A600FA6D7C /* LaunchScreen.storyboard */; };
+		C4BAE14F204705A600FA6D7C /* GEObfuscationSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAE14E204705A600FA6D7C /* GEObfuscationSampleTests.swift */; };
+		C4BAE15A2047071500FA6D7C /* ObfuscatedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAE1592047071500FA6D7C /* ObfuscatedString.swift */; };
+		C4D6E77E20489696006BEF67 /* Obfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D6E77D20489696006BEF67 /* Obfuscation.swift */; };
+		C4D6E77F204896F1006BEF67 /* Obfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D6E77D20489696006BEF67 /* Obfuscation.swift */; };
+		C4D6E78120499A82006BEF67 /* AESCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D6E78020499A82006BEF67 /* AESCrypt.swift */; };
+		C4D6E7862049A1C1006BEF67 /* AESCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D6E78020499A82006BEF67 /* AESCrypt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C401224620481ACB007F7D0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BAE12E204705A600FA6D7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4BAE135204705A600FA6D7C;
+			remoteInfo = GEObfuscationSample;
+		};
+		C4BAE14B204705A600FA6D7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BAE12E204705A600FA6D7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4BAE135204705A600FA6D7C;
+			remoteInfo = GEObfuscationSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C401224120481ACB007F7D0D /* GEObfuscationSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEObfuscationSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C401224320481ACB007F7D0D /* GEObfuscationSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEObfuscationSampleUITests.swift; sourceTree = "<group>"; };
+		C401224520481ACB007F7D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C401224B20484CE6007F7D0D /* MemoryScanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryScanning.swift; sourceTree = "<group>"; };
+		C42C606720494A9400EA9824 /* preTest */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = preTest; sourceTree = "<group>"; usesTabs = 1; };
+		C42C6068204952EF00EA9824 /* postTest */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = postTest; sourceTree = "<group>"; usesTabs = 1; };
+		C458E66A204970C800E4643D /* XCInjectLoggingAndTrapExitInPrePostAction.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCInjectLoggingAndTrapExitInPrePostAction.sh; sourceTree = "<group>"; };
+		C4BAE136204705A600FA6D7C /* GEObfuscationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEObfuscationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BAE139204705A600FA6D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4BAE13B204705A600FA6D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4BAE13E204705A600FA6D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4BAE140204705A600FA6D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4BAE143204705A600FA6D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4BAE145204705A600FA6D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4BAE14A204705A600FA6D7C /* GEObfuscationSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEObfuscationSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BAE14E204705A600FA6D7C /* GEObfuscationSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEObfuscationSampleTests.swift; sourceTree = "<group>"; };
+		C4BAE150204705A600FA6D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4BAE1592047071500FA6D7C /* ObfuscatedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatedString.swift; sourceTree = "<group>"; };
+		C4D6E77D20489696006BEF67 /* Obfuscation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscation.swift; sourceTree = "<group>"; };
+		C4D6E78020499A82006BEF67 /* AESCrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCrypt.swift; sourceTree = "<group>"; };
+		C4D6E78220499AF8006BEF67 /* GEObfuscationSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GEObfuscationSample-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C401223E20481ACB007F7D0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BAE133204705A600FA6D7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BAE147204705A600FA6D7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C401224220481ACB007F7D0D /* GEObfuscationSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C401224320481ACB007F7D0D /* GEObfuscationSampleUITests.swift */,
+				C401224B20484CE6007F7D0D /* MemoryScanning.swift */,
+				C401224520481ACB007F7D0D /* Info.plist */,
+			);
+			path = GEObfuscationSampleUITests;
+			sourceTree = "<group>";
+		};
+		C4BAE12D204705A600FA6D7C = {
+			isa = PBXGroup;
+			children = (
+				C4BAE138204705A600FA6D7C /* GEObfuscationSample */,
+				C4BAE14D204705A600FA6D7C /* GEObfuscationSampleTests */,
+				C401224220481ACB007F7D0D /* GEObfuscationSampleUITests */,
+				C458E66A204970C800E4643D /* XCInjectLoggingAndTrapExitInPrePostAction.sh */,
+				C42C606720494A9400EA9824 /* preTest */,
+				C42C6068204952EF00EA9824 /* postTest */,
+				C4BAE137204705A600FA6D7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4BAE137204705A600FA6D7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BAE136204705A600FA6D7C /* GEObfuscationSample.app */,
+				C4BAE14A204705A600FA6D7C /* GEObfuscationSampleTests.xctest */,
+				C401224120481ACB007F7D0D /* GEObfuscationSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BAE138204705A600FA6D7C /* GEObfuscationSample */ = {
+			isa = PBXGroup;
+			children = (
+				C4BAE139204705A600FA6D7C /* AppDelegate.swift */,
+				C4BAE13B204705A600FA6D7C /* ViewController.swift */,
+				C4BAE1592047071500FA6D7C /* ObfuscatedString.swift */,
+				C4D6E77D20489696006BEF67 /* Obfuscation.swift */,
+				C4D6E78020499A82006BEF67 /* AESCrypt.swift */,
+				C4BAE13D204705A600FA6D7C /* Main.storyboard */,
+				C4BAE140204705A600FA6D7C /* Assets.xcassets */,
+				C4BAE142204705A600FA6D7C /* LaunchScreen.storyboard */,
+				C4BAE145204705A600FA6D7C /* Info.plist */,
+				C4D6E78220499AF8006BEF67 /* GEObfuscationSample-Bridging-Header.h */,
+			);
+			path = GEObfuscationSample;
+			sourceTree = "<group>";
+		};
+		C4BAE14D204705A600FA6D7C /* GEObfuscationSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4BAE14E204705A600FA6D7C /* GEObfuscationSampleTests.swift */,
+				C4BAE150204705A600FA6D7C /* Info.plist */,
+			);
+			path = GEObfuscationSampleTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C401224020481ACB007F7D0D /* GEObfuscationSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C401224820481ACB007F7D0D /* Build configuration list for PBXNativeTarget "GEObfuscationSampleUITests" */;
+			buildPhases = (
+				C401223D20481ACB007F7D0D /* Sources */,
+				C401223E20481ACB007F7D0D /* Frameworks */,
+				C401223F20481ACB007F7D0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C401224720481ACB007F7D0D /* PBXTargetDependency */,
+			);
+			name = GEObfuscationSampleUITests;
+			productName = GEObfuscationSampleUITests;
+			productReference = C401224120481ACB007F7D0D /* GEObfuscationSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C4BAE135204705A600FA6D7C /* GEObfuscationSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4BAE153204705A600FA6D7C /* Build configuration list for PBXNativeTarget "GEObfuscationSample" */;
+			buildPhases = (
+				C4BAE132204705A600FA6D7C /* Sources */,
+				C4BAE133204705A600FA6D7C /* Frameworks */,
+				C4BAE134204705A600FA6D7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEObfuscationSample;
+			productName = GEObfuscationSample;
+			productReference = C4BAE136204705A600FA6D7C /* GEObfuscationSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4BAE149204705A600FA6D7C /* GEObfuscationSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4BAE156204705A600FA6D7C /* Build configuration list for PBXNativeTarget "GEObfuscationSampleTests" */;
+			buildPhases = (
+				C4BAE146204705A600FA6D7C /* Sources */,
+				C4BAE147204705A600FA6D7C /* Frameworks */,
+				C4BAE148204705A600FA6D7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4BAE14C204705A600FA6D7C /* PBXTargetDependency */,
+			);
+			name = GEObfuscationSampleTests;
+			productName = GEObfuscationSampleTests;
+			productReference = C4BAE14A204705A600FA6D7C /* GEObfuscationSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4BAE12E204705A600FA6D7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Grigory Entin";
+				TargetAttributes = {
+					C401224020481ACB007F7D0D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C4BAE135204705A600FA6D7C;
+					};
+					C4BAE135204705A600FA6D7C = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					C4BAE149204705A600FA6D7C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C4BAE135204705A600FA6D7C;
+					};
+				};
+			};
+			buildConfigurationList = C4BAE131204705A600FA6D7C /* Build configuration list for PBXProject "GEObfuscationSample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4BAE12D204705A600FA6D7C;
+			productRefGroup = C4BAE137204705A600FA6D7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4BAE135204705A600FA6D7C /* GEObfuscationSample */,
+				C4BAE149204705A600FA6D7C /* GEObfuscationSampleTests */,
+				C401224020481ACB007F7D0D /* GEObfuscationSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C401223F20481ACB007F7D0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BAE134204705A600FA6D7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BAE144204705A600FA6D7C /* LaunchScreen.storyboard in Resources */,
+				C4BAE141204705A600FA6D7C /* Assets.xcassets in Resources */,
+				C4BAE13F204705A600FA6D7C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BAE148204705A600FA6D7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C401223D20481ACB007F7D0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D6E7862049A1C1006BEF67 /* AESCrypt.swift in Sources */,
+				C401224420481ACB007F7D0D /* GEObfuscationSampleUITests.swift in Sources */,
+				C4D6E77F204896F1006BEF67 /* Obfuscation.swift in Sources */,
+				C401224C20484CE6007F7D0D /* MemoryScanning.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BAE132204705A600FA6D7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BAE13C204705A600FA6D7C /* ViewController.swift in Sources */,
+				C4D6E77E20489696006BEF67 /* Obfuscation.swift in Sources */,
+				C4D6E78120499A82006BEF67 /* AESCrypt.swift in Sources */,
+				C4BAE15A2047071500FA6D7C /* ObfuscatedString.swift in Sources */,
+				C4BAE13A204705A600FA6D7C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BAE146204705A600FA6D7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BAE14F204705A600FA6D7C /* GEObfuscationSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C401224720481ACB007F7D0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4BAE135204705A600FA6D7C /* GEObfuscationSample */;
+			targetProxy = C401224620481ACB007F7D0D /* PBXContainerItemProxy */;
+		};
+		C4BAE14C204705A600FA6D7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4BAE135204705A600FA6D7C /* GEObfuscationSample */;
+			targetProxy = C4BAE14B204705A600FA6D7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4BAE13D204705A600FA6D7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4BAE13E204705A600FA6D7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4BAE142204705A600FA6D7C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4BAE143204705A600FA6D7C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C401224920481ACB007F7D0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				INFOPLIST_FILE = GEObfuscationSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.GEObfuscationSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GEObfuscationSample/GEObfuscationSample-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GEObfuscationSample;
+			};
+			name = Debug;
+		};
+		C401224A20481ACB007F7D0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				INFOPLIST_FILE = GEObfuscationSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.GEObfuscationSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GEObfuscationSample/GEObfuscationSample-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GEObfuscationSample;
+			};
+			name = Release;
+		};
+		C4BAE151204705A600FA6D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C4BAE152204705A600FA6D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4BAE154204705A600FA6D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				INFOPLIST_FILE = GEObfuscationSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.GEObfuscationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GEObfuscationSample/GEObfuscationSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4BAE155204705A600FA6D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				INFOPLIST_FILE = GEObfuscationSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.GEObfuscationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GEObfuscationSample/GEObfuscationSample-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4BAE157204705A600FA6D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				INFOPLIST_FILE = GEObfuscationSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.GEObfuscationSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEObfuscationSample.app/GEObfuscationSample";
+			};
+			name = Debug;
+		};
+		C4BAE158204705A600FA6D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				INFOPLIST_FILE = GEObfuscationSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.GEObfuscationSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEObfuscationSample.app/GEObfuscationSample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C401224820481ACB007F7D0D /* Build configuration list for PBXNativeTarget "GEObfuscationSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C401224920481ACB007F7D0D /* Debug */,
+				C401224A20481ACB007F7D0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4BAE131204705A600FA6D7C /* Build configuration list for PBXProject "GEObfuscationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BAE151204705A600FA6D7C /* Debug */,
+				C4BAE152204705A600FA6D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4BAE153204705A600FA6D7C /* Build configuration list for PBXNativeTarget "GEObfuscationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BAE154204705A600FA6D7C /* Debug */,
+				C4BAE155204705A600FA6D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4BAE156204705A600FA6D7C /* Build configuration list for PBXNativeTarget "GEObfuscationSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BAE157204705A600FA6D7C /* Debug */,
+				C4BAE158204705A600FA6D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4BAE12E204705A600FA6D7C /* Project object */;
+}
