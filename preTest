@@ -35,12 +35,16 @@ brew install shell2http
 #
 # Run -unwind.sh from previous build (as a workaround for no way to unwind if the build was stopped), assuming that it's safe enough to do no harm in case of second invocation.
 #
-. preTest-unwind.sh
+unwindScript="preTest-unwind.sh"
+if [ -f "${unwindScript:?}" ]
+then
+	sh -ex "${unwindScript:?}" || true
+fi
 
 #
 # Run shell2http and generate preTest-unwind.sh for postTest action.
 #
-# The body of the script below is used for matching vs `ps -o command` (see preTest-unwind.sh below). As long as it is the case, it *must* be a *single* command.
+# The body of the script below is used for matching vs `ps -o command` (see "${unwindScript:?}" below). As long as it is the case, it *must* be a *single* command.
 cat > shell2http.sh <<-'END'
 	shell2http \
 		-port=8193 \
@@ -54,7 +58,7 @@ pid=$!
 sleep 1
 ps -p $pid > /dev/null ## Couldn't find a better way to check whether it's still running
 echo $pid > shell2http.pid
-cat > preTest-unwind.sh <<-'END'
+cat > "${unwindScript:?}" <<-'END'
 	# Below is a magic filter (read: quick hack) that should produce value matching `ps -o command` for the running shell2http as defined by shell2http.sh.
 	expectedPSCommand="$(cat shell2http.sh | sed 's/\\//' | tr -d '\n' | tr -d \' | sed 's/ *&//')"
 	pid=$(cat shell2http.pid)
