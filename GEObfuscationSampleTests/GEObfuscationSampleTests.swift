@@ -56,6 +56,7 @@ class GEObfuscationSampleTests: XCTestCase {
 		XCTAssertEqual(copy, s)
 	}
 	
+	/// - Tag: Copy-Violation-Detection
 	func testCopyViolationDetection(_ s: String) {
 		var copy: String?
 		let obfuscated = ObfuscatedString(s)

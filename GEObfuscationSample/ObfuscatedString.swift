@@ -13,6 +13,7 @@ public enum ObfuscatedStringError: Error {
 	case copyViolation(className: String)
 }
 
+/// - Tag: Obfuscated-Value-Wrapper
 public struct ObfuscatedString {
 	
 	private var obfuscatedImp: NSString // NSString for now, just to keep storage the same as for unobfuscated version.
