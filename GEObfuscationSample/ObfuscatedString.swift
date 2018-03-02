@@ -20,11 +20,12 @@ public struct ObfuscatedString {
 		return obfuscatedImp as String
 	}
 	
-	private var unobfuscated: String {
-		return unobfuscate(self.obfuscated)
-	}
-	
-	func withUnobfuscated(allowCopy: Bool, _ handler: (String) -> Void) throws {
+	/// The only way to access the unobfuscated value.
+	/// - parameter allowCopy: Disables validation for no copy of unobfuscated value.
+	/// - parameter handler: Block for processing the unobfuscated value.
+	/// - parameter unobfuscated: The unobfuscated value.
+	/// - Tag: withUnobfuscated
+	func withUnobfuscated(allowCopy: Bool, _ handler: (_ unobfuscated: String) -> Void) throws {
 		weak var x: NSString?
 		autoreleasepool {
 			let unobfuscatedNSString = NSString(string: unobfuscate(self.obfuscated))
@@ -40,6 +41,6 @@ public struct ObfuscatedString {
 	
 	init(_ unobfuscated: String = "") {
 		self.obfuscatedImp = obfuscate(unobfuscated) as NSString
-		// sprint(NSString(utf8String: object_getClassName(self.obfuscatedImp))! as String)
+		// print(NSString(utf8String: object_getClassName(self.obfuscatedImp))! as String)
 	}
 }
